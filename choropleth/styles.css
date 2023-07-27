@@ -1,0 +1,33 @@
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html, body{
+    min-height: 100%
+}
+
+body {
+    background-color: #C0D6E4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+svg{
+    background-color: #C0D6E4;
+}
+
+#canvas{
+    min-height: 650px;
+    min-width: 950px;
+}
+
+#tooltip{
+    visibility: hidden;
+    height: auto;
+    width: auto;
+}
+
+

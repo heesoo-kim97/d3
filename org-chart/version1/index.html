@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  </head>
+
+  <body>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-org-chart@2.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-flextree@2.1.2/build/d3-flextree.js"></script>
+    <div
+      class="chart-container"
+      style="height: 1200px; background-color: white"
+    ></div>
+
+    <script>
+      var chart;
+      d3.csv(
+        'https://raw.githubusercontent.com/bumbeishvili/sample-data/main/org.csv'
+      ).then((dataFlattened) => {
+        chart = new d3.OrgChart()
+          .container('.chart-container')
+          .data(dataFlattened) // https://gist.github.com/bumbeishvili/40fc87bdcdc4d7a1919e4cce2fed10f9
+          .render();
+      });
+    </script>
+  </body>
+
+  <a
+    target="_blank"
+    href="https://github.com/bumbeishvili/d3-organization-chart"
+  >
+    <img
+      style="position: fixed; top: 0; right: 0; border: 0; z-index: 2"
+      width="149"
+      height="149"
+      src="https://bumbeishvili.github.io/d3-tooltip/forkme.png"
+      alt="Fork me on GitHub"
+    />
+  </a>
+  <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+  <script>
+    kofiWidgetOverlay.draw('bumbeishvili', {
+      type: 'floating-chat',
+      'floating-chat.donateButton.text': 'Tip Us',
+      'floating-chat.donateButton.background-color': '#00b9fe',
+      'floating-chat.donateButton.text-color': '#fff',
+    });
+  </script>
+</html>
